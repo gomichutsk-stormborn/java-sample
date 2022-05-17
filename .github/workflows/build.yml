@@ -67,3 +67,13 @@ jobs:
         with:
           name: test-results
           path: legend-shared-test-reports/surefire-reports-aggregate/*.xml
+
+  event_file:
+    name: "Event File"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: event-file
+          path: ${{ github.event_path }}
