@@ -78,6 +78,7 @@ jobs:
           name: test-results
           path: legend-shared-test-reports/surefire-reports-aggregate/*.xml
       - name: Upload CI Event
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: event-file
