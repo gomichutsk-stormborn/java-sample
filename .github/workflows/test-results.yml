@@ -19,10 +19,10 @@ jobs:
 
     steps:
       - name: Debug Only
-        run: 
+        run: echo ${{ github.event.workflow_run.conclusion }}
       - name: Download and Extract Artifacts
-        env: echo ${{ github.event.workflow_run.conclusion }}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p artifacts && cd artifacts
           artifacts_url=${{ github.event.workflow_run.artifacts_url }}
