@@ -20,7 +20,17 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+permissions: {}
 
 jobs:
   build:
