@@ -67,7 +67,7 @@ jobs:
         run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - name: Build + Test
         # if: (github.repository != 'gomichutsk-stormborn/java-sample') || (github.ref != 'refs/heads/main')
-        run: mvn install javadoc:javadoc
+        run: mvn install javadoc:javadoc --fail-at-end
       # - name: Build + Test + Sonar + Maven Deploy
       #   if: (github.repository == 'gomichutsk-stormborn/java-sample') && (github.ref == 'refs/heads/main')
       #   run: mvn javadoc:javadoc deploy -Psonar -pl !legend-shared-test-reports
