@@ -34,8 +34,8 @@ public class JerseyClientSenderTest extends ClientSenderTest
     super.testSendSpans();
   }
 
-  @Test
-  public void dummyTest() {
-    assertEquals("", "123124");
-  }
+//  @Test
+//  public void dummyTest() {
+//    assertEquals("", "123124");
+//  }
 }
