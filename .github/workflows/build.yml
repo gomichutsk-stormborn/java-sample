@@ -25,10 +25,10 @@ on:
     branches:
       - main
     tags:
-      - '*'
+      - "*"
   pull_request:
-  schedule:
-    - cron: '0 16 * * *'
+  # schedule:
+  #   - cron: '0 16 * * *'
   workflow_dispatch:
 permissions: {}
 
