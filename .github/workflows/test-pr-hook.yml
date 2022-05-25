@@ -1,0 +1,10 @@
+name: On Pull-Request
+
+on: [pull-request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug Only
+        run: echo 'pull-request'
