@@ -1,10 +1,10 @@
 name: On Pull-Request
 
-on: [pull-request]
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Debug Only
-        run: echo 'pull-request'
+        run: echo 'pull-request ${{ github.event.pull_request.type }}'
