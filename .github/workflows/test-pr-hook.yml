@@ -7,4 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Debug Only
-        run: echo '${{ github.event.pull_request }}'
+        env:
+          # GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github.event.pull_request) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
